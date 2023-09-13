@@ -1,9 +1,14 @@
 import './App.css';
+import Carts from './Component/Carts/Carts';
+import Home from './Component/Home/Home';
 
 function App() {
   return (
     <>
-      <h1 className="text-2xl">Hello</h1>
+      <div className="flex">
+        <Home />
+        <Carts />
+      </div>
     </>
   );
 }
