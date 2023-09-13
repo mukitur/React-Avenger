@@ -5,10 +5,24 @@ import Home from './Component/Home/Home';
 
 function App() {
   const [carts, setCarts] = useState([]);
+
   const handleAddToCart = (avenger) => {
     // console.log('cart added soon', avenger);
-    const newAvenger = [...carts, avenger];
-    setCarts(newAvenger);
+
+    const isExists = carts.find((item) => item.id === avenger.id);
+    // console.log(isExists);
+    let count = avenger.salary;
+    if (isExists) {
+      alert('Already Added for Avenger Movie');
+    } else {
+      carts.forEach((item) => {
+        count = count + item.salary;
+      });
+      // console.log(count);
+
+      const newAvenger = [...carts, avenger];
+      setCarts(newAvenger);
+    }
   };
   return (
     <>

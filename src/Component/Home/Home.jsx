@@ -10,7 +10,7 @@ const Home = ({ handleAddToCart }) => {
   }, []);
   return (
     <div className="md:w-2/3">
-      <h1 className="text-2xl"> Total: {avengers.length}</h1>
+      <h1 className="text-2xl"> Total Avengers: {avengers.length}</h1>
       <div className="grid md:grid-cols-3 gap-6 my-5">
         {avengers.map((avenger) => (
           <Avenger
