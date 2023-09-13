@@ -21,10 +21,10 @@ function App() {
         count = count + item.salary;
       });
       // console.log(count);
-      const totalRemaining = 20000 - count;
+      const totalRemaining = 25000 - count;
 
-      if (count > 20000) {
-        return alert('Budjet over');
+      if (count > 25000) {
+        return alert('OPPS! Budjet Over, You cant add more');
       } else {
         setTotalCost(count);
         setRemaining(totalRemaining);
